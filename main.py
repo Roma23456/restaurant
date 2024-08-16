@@ -1,5 +1,5 @@
 import sqlite3
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 
 app = Flask(__name__)
 
@@ -127,7 +127,7 @@ def delete1(id):
 
 @app.route('/pizza')
 def main1():
-    return render_template("pizza.html")
+    return send_file("pizza.html")
 
 
 @app.route('/sushi')
